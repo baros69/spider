@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: flask-phishing-test
+    env: python
+    buildCommand: ""
+    startCommand: python phish_app.py
