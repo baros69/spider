@@ -1,11 +1,66 @@
 <!DOCTYPE html>
-<html>
-  <body>
-    <h2>Connexion</h2>
-    <form action="/submit" method="POST">
-      <input type="email" name="email" placeholder="Email" required><br>
-      <input type="password" name="password" placeholder="Mot de passe" required><br>
-      <button type="submit">Se connecter</button>
-    </form>
-  </body>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Connexion</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* bleu-marron */
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    button {
+      width: 95%;
+      padding: 12px;
+      background-color: #2c5364;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1a2b34;
+    }
+  </style>
+</head>
+<body>
+  <form class="container" action="/submit" method="POST">
+    <h2>Connexion sécurisée</h2>
+    <input type="email" name="email" placeholder="Adresse e-mail" required>
+    <input type="password" name="password" placeholder="Mot de passe" required>
+    <button type="submit">Se connecter</button>
+  </form>
+</body>
 </html>
