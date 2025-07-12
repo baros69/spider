@@ -1,6 +1,9 @@
 services:
   - type: web
-    name: flask-phishing-test
+    name: piegeX
     env: python
     buildCommand: ""
-    startCommand: python phish_app.py
+    startCommand: "python phish_app.py"
+    branch: main
+    repo: https://github.com/baros69/spider
+    plan: free
